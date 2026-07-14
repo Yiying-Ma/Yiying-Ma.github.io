@@ -2,26 +2,25 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 7.1.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/m.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/m%20.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/m.png">
-  <link rel="mask-icon" href="/images/m.svg" color="#222">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yiying-ma.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-  <meta name="description" content="地表浅层存在着大量的热（冷）能，如能将其利用起来，将是非常有意义的。本文通过搭建实验台的方式说明了对于地下冷量利用的可行性。本文给出了一种搭建小型制冷循环的实验方案，对循环搭建过程、循环设备选型等都给出了较为明确的选择。本文拟通过模拟搭建小型制冷循环实验台以达到教学、演示等目的。">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yiying-ma.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="地表浅层存在着大量的热（冷）能，如能将其利用起来，将是非常有意义的。本文通过搭建实验台的方式说明了对于地下冷量利用的可行性。本文给出了一种搭建小型制冷循环的实验方案，对循环搭建过程、循环设备选型等都给出了较为明确的选择。本文拟通过模拟搭建小型制冷循环实验台以达到教学、演示等目的。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="地下冷量利用系统实验台设计与优化">
 <meta property="og:url" content="https://yiying-ma.github.io/2024/06/17/%E5%9C%B0%E4%B8%8B%E5%86%B7%E9%87%8F%E5%88%A9%E7%94%A8%E5%AE%9E%E9%AA%8C%E5%8F%B0%E8%AE%BE%E8%AE%A1/index.html">
@@ -49,20 +48,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://yiying-ma.github.io/2024/06/17/%E5%9C%B0%E4%B8%8B%E5%86%B7%E9%87%8F%E5%88%A9%E7%94%A8%E5%AE%9E%E9%AA%8C%E5%8F%B0%E8%AE%BE%E8%AE%A1/%E5%9B%BE%E7%89%871.png">
 
+
 <link rel="canonical" href="https://yiying-ma.github.io/2024/06/17/%E5%9C%B0%E4%B8%8B%E5%86%B7%E9%87%8F%E5%88%A9%E7%94%A8%E5%AE%9E%E9%AA%8C%E5%8F%B0%E8%AE%BE%E8%AE%A1/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yiying-ma.github.io/2024/06/17/%E5%9C%B0%E4%B8%8B%E5%86%B7%E9%87%8F%E5%88%A9%E7%94%A8%E5%AE%9E%E9%AA%8C%E5%8F%B0%E8%AE%BE%E8%AE%A1/","path":"2024/06/17/地下冷量利用实验台设计/","title":"地下冷量利用系统实验台设计与优化"}</script>
 
-  <title>地下冷量利用系统实验台设计与优化 | 鸷鹗啄孤凤</title>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>地下冷量利用系统实验台设计与优化 | 鸷鹗啄孤凤</title>
   
 
 
@@ -70,57 +63,58 @@
 
 
 
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">鸷鹗啄孤凤</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <p class="site-title">鸷鹗啄孤凤</p>
+      <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">欢迎来到新世界</p>
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
         <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
@@ -128,39 +122,8 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">12</span></a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">5</span></a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">21</span></a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-guestbook">
-
-    <a href="/guestbook" rel="section"><i class="fa fa-book fa-fw"></i>留言</a>
-
-  </li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">12</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">5</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">21</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-留言板"><a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言板</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -172,117 +135,176 @@
 
   <div class="search-pop-overlay">
     <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
     </div>
   </div>
 
-</div>
-    </header>
+</header>
+        
+  
+  <aside class="sidebar">
 
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E7%A0%94%E7%A9%B6%E8%83%8C%E6%99%AF"><span class="nav-number">1.</span> <span class="nav-text">1. 研究背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%BE%AA%E7%8E%AF%E5%BB%BA%E7%AB%8B"><span class="nav-number">2.</span> <span class="nav-text">2. 循环建立</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E6%A8%A1%E6%8B%9F%E6%A8%A1%E5%9E%8B%E5%BB%BA%E7%AB%8B"><span class="nav-number">3.</span> <span class="nav-text">3. 模拟模型建立</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%9C%B0%E4%B8%8A%E9%83%A8%E5%88%86%E6%A8%A1%E6%8B%9F"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 地上部分模拟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%9C%B0%E4%B8%8B%E9%83%A8%E5%88%86%E6%A8%A1%E6%8B%9F"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 地下部分模拟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E5%8F%82%E6%95%B0%E7%A1%AE%E5%AE%9A%E5%8F%8A%E8%AE%BE%E5%A4%87%E9%80%89%E6%8B%A9"><span class="nav-number">4.</span> <span class="nav-text">4. 参数确定及设备选择</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E5%8E%8B%E7%BC%A9%E6%9C%BA"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 压缩机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-%E5%9C%B0%E4%B8%8B%E5%9C%9F%E5%A3%A4%E5%AF%BC%E7%83%AD%E7%B3%BB%E6%95%B0"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 地下土壤导热系数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-%E5%9C%B0%E4%B8%8B%E5%9F%8B%E7%AE%A1"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 地下埋管</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-%E5%BA%95%E4%B8%8B%E6%B8%A9%E5%BA%A6"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 底下温度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-%E8%8A%82%E6%B5%81%E9%98%80"><span class="nav-number">4.5.</span> <span class="nav-text">4.5 节流阀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-6-%E8%92%B8%E5%8F%91%E5%99%A8"><span class="nav-number">4.6.</span> <span class="nav-text">4.6 蒸发器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-7-%E7%AE%A1%E9%81%93"><span class="nav-number">4.7.</span> <span class="nav-text">4.7 管道</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-8-%E6%B5%8B%E6%B8%A9%E8%AE%BE%E5%A4%87"><span class="nav-number">4.8.</span> <span class="nav-text">4.8 测温设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-9-%E6%B5%8B%E5%8E%8B%E8%AE%BE%E5%A4%87"><span class="nav-number">4.9.</span> <span class="nav-text">4.9 测压设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-10-%E6%B5%81%E9%87%8F%E8%AE%A1"><span class="nav-number">4.10.</span> <span class="nav-text">4.10 流量计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-11-%E5%B0%8F%E7%BB%93"><span class="nav-number">4.11.</span> <span class="nav-text">4.11 小结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E5%AE%9E%E9%AA%8C%E5%8F%B0%E5%8A%9F%E8%83%BD"><span class="nav-number">5.</span> <span class="nav-text">5. 实验台功能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%AE%A1%E7%AE%97%E5%88%B6%E5%86%B7%E5%BE%AA%E7%8E%AF%E4%B8%AD%E7%9A%84%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0%EF%BC%8C%E5%88%86%E6%9E%90%E5%9C%B0%E4%B8%8B%E5%86%B7%E9%87%8F%E5%88%A9%E7%94%A8%E5%8F%AF%E8%A1%8C%E6%80%A7"><span class="nav-number">5.1.</span> <span class="nav-text">1. 计算制冷循环中的相关参数，分析地下冷量利用可行性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%8D%A2%E7%83%AD%E5%99%A8%E5%88%86%E6%9E%90"><span class="nav-number">5.2.</span> <span class="nav-text">2. 换热器分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E5%AE%9E%E9%AA%8C%E5%8F%B0%E4%BC%98%E5%8C%96"><span class="nav-number">6.</span> <span class="nav-text">6. 实验台优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-%E4%B8%B0%E5%AF%8C%E7%A0%94%E7%A9%B6%E5%86%85%E5%AE%B9"><span class="nav-number">6.1.</span> <span class="nav-text">6.1 丰富研究内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E6%96%B9%E5%BC%8F%E5%AF%B9%E6%AF%94"><span class="nav-number">6.2.</span> <span class="nav-text">6.2 与传统方式对比</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E7%BB%93%E8%AF%AD"><span class="nav-number">7.</span> <span class="nav-text">7. 结语</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">8.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ma Yiying"
+      src="/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">Ma Yiying</p>
+  <div class="site-description" itemprop="description">鸷鹗啄孤凤</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Yiying-Ma" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Yiying-Ma" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ma_yiying@163.com" title="E-Mail → mailto:ma_yiying@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
   </div>
 
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
+        </div>
+      </div>
+    </div>
 
     
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://yiying-ma.github.io/2024/06/17/%E5%9C%B0%E4%B8%8B%E5%86%B7%E9%87%8F%E5%88%A9%E7%94%A8%E5%AE%9E%E9%AA%8C%E5%8F%B0%E8%AE%BE%E8%AE%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/1.jpg">
+      <meta itemprop="image" content="/uploads/avatar.png">
       <meta itemprop="name" content="Ma Yiying">
-      <meta itemprop="description" content="鸷鹗啄孤凤">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="鸷鹗啄孤凤">
+      <meta itemprop="description" content="鸷鹗啄孤凤">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="地下冷量利用系统实验台设计与优化 | 鸷鹗啄孤凤">
+      <meta itemprop="description" content="地表浅层存在着大量的热（冷）能，如能将其利用起来，将是非常有意义的。本文通过搭建实验台的方式说明了对于地下冷量利用的可行性。本文给出了一种搭建小型制冷循环的实验方案，对循环搭建过程、循环设备选型等都给出了较为明确的选择。本文拟通过模拟搭建小型制冷循环实验台以达到教学、演示等目的。">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           地下冷量利用系统实验台设计与优化
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-06-17 16:02:16" itemprop="dateCreated datePublished" datetime="2024-06-17T16:02:16+08:00">2024-06-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2026-07-15 04:37:05" itemprop="dateModified" datetime="2026-07-15T04:37:05+08:00">2026-07-15</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
       <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
+        <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2024/06/17/%E5%9C%B0%E4%B8%8B%E5%86%B7%E9%87%8F%E5%88%A9%E7%94%A8%E5%AE%9E%E9%AA%8C%E5%8F%B0%E8%AE%BE%E8%AE%A1/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2024/06/17/%E5%9C%B0%E4%B8%8B%E5%86%B7%E9%87%8F%E5%88%A9%E7%94%A8%E5%AE%9E%E9%AA%8C%E5%8F%B0%E8%AE%BE%E8%AE%A1/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text"></span>
-              <span>6.8k</span>
-            </span>
-            <div class="post-description">地表浅层存在着大量的热（冷）能，如能将其利用起来，将是非常有意义的。本文通过搭建实验台的方式说明了对于地下冷量利用的可行性。本文给出了一种搭建小型制冷循环的实验方案，对循环搭建过程、循环设备选型等都给出了较为明确的选择。本文拟通过模拟搭建小型制冷循环实验台以达到教学、演示等目的。</div>
+      <span class="post-meta-item-text">发表于</span>
 
+      <time title="创建时间：2024-06-17 16:02:16" itemprop="dateCreated datePublished" datetime="2024-06-17T16:02:16+08:00">2024-06-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-07-15 04:37:05" itemprop="dateModified" datetime="2026-07-15T04:37:05+08:00">2026-07-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E7%AB%A0%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index"><span itemprop="name">文章报告</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E7%AB%A0%E6%8A%A5%E5%91%8A/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/" itemprop="url" rel="index"><span itemprop="name">课程作业</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6.8k</span>
+    </span>
+</div>
+
+            <div class="post-description">地表浅层存在着大量的热（冷）能，如能将其利用起来，将是非常有意义的。本文通过搭建实验台的方式说明了对于地下冷量利用的可行性。本文给出了一种搭建小型制冷循环的实验方案，对循环搭建过程、循环设备选型等都给出了较为明确的选择。本文拟通过模拟搭建小型制冷循环实验台以达到教学、演示等目的。</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <h1 id="1-研究背景"><a href="#1-研究背景" class="headerlink" title="1. 研究背景"></a>1. 研究背景</h1><p>土壤是一个庞大的蓄冷体，其内部蓄存着巨大的地下热能，在对地热能的开发研究过程中，人们开始意识到蕴藏在地表浅层地热能。地表浅层是一个巨大的太阳能集热器，收集了47%的太阳能量，比人类每年利用能量的500倍还多。因此，浅层地热能是真正意义上的可再生能源。</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="1-研究背景"><a href="#1-研究背景" class="headerlink" title="1. 研究背景"></a>1. 研究背景</h1><p>土壤是一个庞大的蓄冷体，其内部蓄存着巨大的地下热能，在对地热能的开发研究过程中，人们开始意识到蕴藏在地表浅层地热能。地表浅层是一个巨大的太阳能集热器，收集了47%的太阳能量，比人类每年利用能量的500倍还多。因此，浅层地热能是真正意义上的可再生能源。</p>
 <p>以土壤为冷热源的地源热泵技术（Ground-Source Heat Pump，简称GSHP）是一种高效节能、清洁无污染的能源利用技术。GSHP利用土壤的蓄热（冷）性质，通过中间介质，在封闭的地下换埋管换热器中循环流动，从而实现于土壤的热交换。在夏季通过热泵将建筑物的热量转移到地下，对建筑物进行降温，同时可以贮存热量，以备冬天采暖。</p>
 <p>本文针对地下冷量利用方面提出了一种以搭建实验台的方式模拟地下冷量利用的设计方案。通过本实验台的搭建，真实模拟了对于地下冷量的利用循环装置。本实验台可用于教学，可以更加直观的认识热泵循环的相关设备，对制冷循环有更加深刻的理解。</p>
 <h1 id="2-循环建立"><a href="#2-循环建立" class="headerlink" title="2. 循环建立"></a>2. 循环建立</h1><p>对于地下冷量的利用，本实验台所选择的循环为制冷循环。消耗外部机械功，以实现热能由低温物体向高温物体的转移。根据热力学第二定律，进行这样的过程必须外界向系统提供机械能，以确保包括低温冷源、高温热源、功源在内的孤立系统的熵不减少。</p>
@@ -848,319 +870,111 @@ q_Q=q_m\times q_c</script><h2 id="2-换热器分析"><a href="#2-换热器分析
     
     
     
-        
 
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>Ma Yiying
-  </li>
-    <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-
-      <footer class="post-footer">
-          
+    <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E8%83%BD%E5%8A%A8%E5%AD%A6%E7%A7%91/" rel="tag"><i class="fa fa-tag"></i> 能动学科</a>
+              <a href="/tags/%E8%83%BD%E5%8A%A8%E5%AD%A6%E7%A7%91/" rel="tag"># 能动学科</a>
           </div>
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2024/04/19/%E5%8D%95%E7%AE%A1%E4%BD%8E%E9%A2%91%E7%94%B5%E5%8E%8B%E6%94%BE%E5%A4%A7%E5%99%A8%E4%BB%BF%E7%9C%9F%E5%AE%9E%E9%AA%8C/" rel="prev" title="单管低频电压放大器仿真实验">
-      <i class="fa fa-chevron-left"></i> 单管低频电压放大器仿真实验
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2024/06/26/%E5%9C%86%E6%9F%B1%E7%BB%95%E6%B5%81%E6%A8%A1%E6%8B%9F/" rel="next" title="圆柱绕流模拟">
-      圆柱绕流模拟 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/04/19/%E5%8D%95%E7%AE%A1%E4%BD%8E%E9%A2%91%E7%94%B5%E5%8E%8B%E6%94%BE%E5%A4%A7%E5%99%A8%E4%BB%BF%E7%9C%9F%E5%AE%9E%E9%AA%8C/" rel="prev" title="单管低频电压放大器仿真实验">
+                  <i class="fa fa-angle-left"></i> 单管低频电压放大器仿真实验
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/06/26/%E5%9C%86%E6%9F%B1%E7%BB%95%E6%B5%81%E6%A8%A1%E6%8B%9F/" rel="next" title="圆柱绕流模拟">
+                  圆柱绕流模拟 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
-  
-  
-  
-
-
-
-          </div>
-          
-    <div class="comments" id="valine-comments"></div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E7%A0%94%E7%A9%B6%E8%83%8C%E6%99%AF"><span class="nav-text">1. 研究背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%BE%AA%E7%8E%AF%E5%BB%BA%E7%AB%8B"><span class="nav-text">2. 循环建立</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E6%A8%A1%E6%8B%9F%E6%A8%A1%E5%9E%8B%E5%BB%BA%E7%AB%8B"><span class="nav-text">3. 模拟模型建立</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%9C%B0%E4%B8%8A%E9%83%A8%E5%88%86%E6%A8%A1%E6%8B%9F"><span class="nav-text">3.1 地上部分模拟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%9C%B0%E4%B8%8B%E9%83%A8%E5%88%86%E6%A8%A1%E6%8B%9F"><span class="nav-text">3.2 地下部分模拟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E5%8F%82%E6%95%B0%E7%A1%AE%E5%AE%9A%E5%8F%8A%E8%AE%BE%E5%A4%87%E9%80%89%E6%8B%A9"><span class="nav-text">4. 参数确定及设备选择</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E5%8E%8B%E7%BC%A9%E6%9C%BA"><span class="nav-text">4.1 压缩机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-%E5%9C%B0%E4%B8%8B%E5%9C%9F%E5%A3%A4%E5%AF%BC%E7%83%AD%E7%B3%BB%E6%95%B0"><span class="nav-text">4.2 地下土壤导热系数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-%E5%9C%B0%E4%B8%8B%E5%9F%8B%E7%AE%A1"><span class="nav-text">4.3 地下埋管</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-%E5%BA%95%E4%B8%8B%E6%B8%A9%E5%BA%A6"><span class="nav-text">4.4 底下温度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-%E8%8A%82%E6%B5%81%E9%98%80"><span class="nav-text">4.5 节流阀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-6-%E8%92%B8%E5%8F%91%E5%99%A8"><span class="nav-text">4.6 蒸发器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-7-%E7%AE%A1%E9%81%93"><span class="nav-text">4.7 管道</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-8-%E6%B5%8B%E6%B8%A9%E8%AE%BE%E5%A4%87"><span class="nav-text">4.8 测温设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-9-%E6%B5%8B%E5%8E%8B%E8%AE%BE%E5%A4%87"><span class="nav-text">4.9 测压设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-10-%E6%B5%81%E9%87%8F%E8%AE%A1"><span class="nav-text">4.10 流量计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-11-%E5%B0%8F%E7%BB%93"><span class="nav-text">4.11 小结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E5%AE%9E%E9%AA%8C%E5%8F%B0%E5%8A%9F%E8%83%BD"><span class="nav-text">5. 实验台功能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%AE%A1%E7%AE%97%E5%88%B6%E5%86%B7%E5%BE%AA%E7%8E%AF%E4%B8%AD%E7%9A%84%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0%EF%BC%8C%E5%88%86%E6%9E%90%E5%9C%B0%E4%B8%8B%E5%86%B7%E9%87%8F%E5%88%A9%E7%94%A8%E5%8F%AF%E8%A1%8C%E6%80%A7"><span class="nav-text">1. 计算制冷循环中的相关参数，分析地下冷量利用可行性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%8D%A2%E7%83%AD%E5%99%A8%E5%88%86%E6%9E%90"><span class="nav-text">2. 换热器分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E5%AE%9E%E9%AA%8C%E5%8F%B0%E4%BC%98%E5%8C%96"><span class="nav-text">6. 实验台优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-%E4%B8%B0%E5%AF%8C%E7%A0%94%E7%A9%B6%E5%86%85%E5%AE%B9"><span class="nav-text">6.1 丰富研究内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E6%96%B9%E5%BC%8F%E5%AF%B9%E6%AF%94"><span class="nav-text">6.2 与传统方式对比</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E7%BB%93%E8%AF%AD"><span class="nav-text">7. 结语</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-text">参考文献</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Ma Yiying"
-      src="/uploads/1.jpg">
-  <p class="site-author-name" itemprop="name">Ma Yiying</p>
-  <div class="site-description" itemprop="description">鸷鹗啄孤凤</div>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives">
-        
-          <span class="site-state-item-count">21</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories">
-          
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags">
-          
-        <span class="site-state-item-count">12</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/Yiying-Ma" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Yiying-Ma" rel="noopener" target="_blank">GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:ma_yiying@163.com" title="E-Mail → mailto:ma_yiying@163.com" rel="noopener" target="_blank">E-Mail</a>
-      </span>
-  </div>
 
 
 
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
 
 
-      </div>
-    </main>
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">
+    
   
-  &copy; 2024 – 
-  <span itemprop="copyrightYear">2026</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">鸷鹗啄孤凤</span>
-    <span class="post-meta-divider">|</span>
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ma Yiying</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
+      <i class="fa fa-chart-line"></i>
     </span>
     <span title="站点总字数">78k</span>
+  </span>
 </div>
-
-<script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
-  
-  
-  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
+    </div>
+  </footer>
 
   
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
 
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-      
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"Yiying-Ma/Yiying-Ma.github.io","repo_id":"R_kgDOLu6ADA","category":"Announcements","category_id":"DIC_kwDOLu6ADM4DBNWR","mapping":"pathname","strict":0,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"top","loading":"lazy"}</script>
 
 <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
       },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
-
-  
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'PX4NxhEi6APJug1YVsMTODpl-gzGzoHsz',
-      appKey     : 'pdZlDBlvSpFJj9xX9a1ilCXg',
-      placeholder: "幸有微吟可相狎，不须檀板共金樽。",
-      avatar     : 'mm',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : false,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
+      parentNode: document.querySelector('.giscus-container')
+    }));
 });
 </script>
 
