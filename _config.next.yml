@@ -1,0 +1,85 @@
+# ---------------------------------------------------------------
+# NexT 主题配置覆盖文件（hexo-theme-next 8.x，通过 npm 安装）
+# 这里的配置会覆盖 node_modules/hexo-theme-next/_config.yml 的默认值
+# 完整配置项说明见：https://theme-next.js.org/docs/
+# ---------------------------------------------------------------
+
+# 布局方案（沿用原来的 Pisces 双栏布局）
+scheme: Pisces
+
+# 深色模式：跟随系统自动切换
+darkmode: true
+
+# 导航菜单
+menu:
+  home: / || fa fa-home
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-th
+  archives: /archives/ || fa fa-archive
+  about: /about/ || fa fa-user
+  留言板: /guestbook/ || fa fa-book
+
+menu_settings:
+  icons: true
+  badges: true
+
+# 侧栏
+sidebar:
+  position: left
+
+# 侧栏头像（来自 GitHub 头像）
+avatar:
+  url: /uploads/avatar.png
+  rounded: true
+  rotated: true
+
+# 侧栏显示文章/分类/标签统计
+site_state: true
+
+# 社交链接
+social:
+  GitHub: https://github.com/Yiying-Ma || fab fa-github
+  E-Mail: mailto:ma_yiying@163.com || fa fa-envelope
+
+# 代码块：增加复制按钮
+codeblock:
+  copy_button:
+    enable: true
+    style: flat
+  language: true
+
+# 返回顶部按钮（显示滚动百分比）
+back2top:
+  enable: true
+  sidebar: false
+  scrollpercent: true
+
+# 阅读进度条（页面顶部）
+reading_progress:
+  enable: true
+  position: top
+  color: "#37c6c0"
+  height: 3px
+
+# 站内搜索（依赖 hexo-generator-searchdb，已安装）
+local_search:
+  enable: true
+  top_n_per_article: 1
+  unescape: false
+  preload: true
+
+# Giscus 评论系统（基于 GitHub Discussions，通过 hexo-next-giscus 插件）
+giscus:
+  enable: true
+  repo: Yiying-Ma/Yiying-Ma.github.io
+  repo_id: R_kgDOLu6ADA
+  category: Announcements
+  category_id: DIC_kwDOLu6ADM4DBNWR
+  mapping: pathname
+  reactions_enabled: 1
+  emit_metadata: 0
+  # 跟随系统深色/浅色模式
+  theme: preferred_color_scheme
+  lang: zh-CN
+  input_position: top
+  loading: lazy
