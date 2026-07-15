@@ -1414,7 +1414,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #47ff99;
+    background: #ff8b1b;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3075,6 +3075,56 @@ body {
 .post-block:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 32px rgba(60,80,150,0.16);
+}
+.main-inner.index {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  background: transparent;
+  box-shadow: none;
+}
+.main-inner.index .pagination {
+  grid-column: 1/-1;
+}
+.index .post-block {
+  margin-top: 0;
+  padding: 22px 24px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.index .posts-expand .post-title {
+  font-size: 1.05em;
+  line-height: 1.45;
+}
+.index .posts-expand .post-header {
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+}
+.index .posts-expand .post-meta-container {
+  font-size: 0.78em;
+  margin-top: 4px;
+}
+.index .posts-expand .post-body {
+  font-size: 0.86em;
+  color: #777;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.index .posts-expand .post-button {
+  margin-top: auto;
+  padding-top: 12px;
+}
+@media (max-width: 767px) {
+  .main-inner.index {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .index .posts-expand .post-body {
+    color: #9aa0a6;
+  }
 }
 .post-button .btn {
   background: linear-gradient(90deg, #37c6c0, #7c4dff);
