@@ -1414,7 +1414,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ff8b1b;
+    background: #d74a13;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3077,53 +3077,56 @@ body {
   box-shadow: 0 10px 32px rgba(60,80,150,0.16);
 }
 .main-inner.index {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  background: transparent;
-  box-shadow: none;
-}
-.main-inner.index .pagination {
-  grid-column: 1/-1;
+  background: var(--content-bg-color);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(60,80,150,0.08);
+  padding: 12px 32px;
 }
 .index .post-block {
-  margin-top: 0;
-  padding: 22px 24px 18px;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 14px 4px;
+  border-bottom: 1px dashed rgba(128,128,128,0.25);
+}
+.index .post-block:last-of-type {
+  border-bottom: none;
+}
+.index .post-block:hover {
+  transform: none;
+  box-shadow: none;
+  background: linear-gradient(90deg, rgba(55,198,192,0.06), rgba(124,77,255,0.06));
+  border-radius: 8px;
+}
+.index .posts-expand .post-header {
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
 }
 .index .posts-expand .post-title {
   font-size: 1.05em;
-  line-height: 1.45;
-}
-.index .posts-expand .post-header {
-  margin-bottom: 12px;
-  padding-bottom: 10px;
+  text-align: left;
+  line-height: 1.5;
 }
 .index .posts-expand .post-meta-container {
-  font-size: 0.78em;
-  margin-top: 4px;
+  font-size: 0.8em;
+  margin: 0;
+  white-space: nowrap;
 }
-.index .posts-expand .post-body {
-  font-size: 0.86em;
-  color: #777;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
+.index .posts-expand .post-body,
 .index .posts-expand .post-button {
-  margin-top: auto;
-  padding-top: 12px;
+  display: none;
 }
-@media (max-width: 767px) {
-  .main-inner.index {
-    grid-template-columns: 1fr;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .index .posts-expand .post-body {
-    color: #9aa0a6;
+@media (max-width: 567px) {
+  .index .posts-expand .post-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
   }
 }
 .post-button .btn {
