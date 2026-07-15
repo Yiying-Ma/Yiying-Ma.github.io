@@ -68,6 +68,12 @@ local_search:
   unescape: false
   preload: true
 
+# 页面动画：并行播放（async）+ 时长减半，减少对阅读的干扰
+motion:
+  enable: true
+  async: true
+  duration: 100
+
 # 数学公式渲染（老文章和新文章都用到 LaTeX 公式）
 math:
   every_page: false   # 只在 front-matter 带 mathjax: true 的文章加载
