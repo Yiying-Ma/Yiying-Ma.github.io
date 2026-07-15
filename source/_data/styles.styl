@@ -36,6 +36,64 @@ body {
   box-shadow: 0 10px 32px rgba(60, 80, 150, 0.16);
 }
 
+// ---------- 首页：网格小方块布局 ----------
+.main-inner.index {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  background: transparent;
+  box-shadow: none;
+}
+.main-inner.index .pagination {
+  grid-column: 1 / -1;
+}
+// 紧凑卡片
+.index .post-block {
+  margin-top: 0;
+  padding: 22px 24px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.index .posts-expand .post-title {
+  font-size: 1.05em;
+  line-height: 1.45;
+}
+.index .posts-expand .post-header {
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+}
+.index .posts-expand .post-meta-container {
+  font-size: 0.78em;
+  margin-top: 4px;
+}
+// 简介最多显示 3 行
+.index .posts-expand .post-body {
+  font-size: 0.86em;
+  color: #777;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+// 按钮固定在卡片底部
+.index .posts-expand .post-button {
+  margin-top: auto;
+  padding-top: 12px;
+}
+// 手机端恢复单列
+@media (max-width: 767px) {
+  .main-inner.index {
+    grid-template-columns: 1fr;
+  }
+}
+
+// 深色模式下简介文字颜色
+@media (prefers-color-scheme: dark) {
+  .index .posts-expand .post-body {
+    color: #9aa0a6;
+  }
+}
+
 // “阅读全文”按钮：渐变胶囊
 .post-button .btn {
   background: linear-gradient(90deg, #37c6c0, #7c4dff);
