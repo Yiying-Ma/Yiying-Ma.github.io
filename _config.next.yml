@@ -4,8 +4,8 @@
 # 完整配置项说明见：https://theme-next.js.org/docs/
 # ---------------------------------------------------------------
 
-# 布局方案（沿用原来的 Pisces 双栏布局）
-scheme: Pisces
+# 布局方案：Gemini 卡片流（每篇文章独立卡片）
+scheme: Gemini
 
 # 深色模式：跟随系统自动切换
 darkmode: true

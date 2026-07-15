@@ -22,21 +22,32 @@ body {
 }
 
 // ---------- 内容/侧栏卡片：圆角 + 柔和阴影 + 悬浮效果 ----------
-.content-wrap, .sidebar-inner {
+.content-wrap, .sidebar-inner, .post-block {
   border-radius: 14px;
   box-shadow: 0 4px 20px rgba(60, 80, 150, 0.08);
-  transition: box-shadow 0.3s ease;
-}
-.content-wrap:hover {
-  box-shadow: 0 8px 30px rgba(60, 80, 150, 0.14);
 }
 
-// 首页文章块之间的悬浮反馈
+// Gemini 首页卡片悬浮反馈
 .post-block {
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .post-block:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(60, 80, 150, 0.16);
+}
+
+// “阅读全文”按钮：渐变胶囊
+.post-button .btn {
+  background: linear-gradient(90deg, #37c6c0, #7c4dff);
+  color: #fff !important;
+  border: none;
+  border-radius: 999px;
+  padding: 4px 18px;
+  transition: all 0.25s ease;
+}
+.post-button .btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
 }
 
 // ---------- 文章标题悬浮渐变 ----------
