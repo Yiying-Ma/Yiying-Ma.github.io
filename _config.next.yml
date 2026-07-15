@@ -68,11 +68,16 @@ local_search:
   unescape: false
   preload: true
 
-# 页面动画：并行播放（async）+ 时长减半，减少对阅读的干扰
+# 页面动画：并行播放（async）+ 极短时长，减少对阅读的干扰
 motion:
   enable: true
   async: true
-  duration: 100
+  duration: 50
+
+# 自定义样式/脚本注入（华丽化）
+custom_file_path:
+  style: source/_data/styles.styl
+  bodyEnd: source/_data/body-end.njk
 
 # 数学公式渲染（老文章和新文章都用到 LaTeX 公式）
 math:

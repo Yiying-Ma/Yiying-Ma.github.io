@@ -1,0 +1,12 @@
+{# 背景粒子连线特效（仅桌面端加载，避免影响手机阅读和性能） #}
+<script>
+  if (window.innerWidth > 768) {
+    var cn = document.createElement('script');
+    cn.src = '/js/canvas-nest.js';
+    cn.setAttribute('color', '124,77,255');
+    cn.setAttribute('opacity', '0.6');
+    cn.setAttribute('count', '99');
+    cn.setAttribute('zIndex', '-1');
+    document.body.appendChild(cn);
+  }
+</script>
