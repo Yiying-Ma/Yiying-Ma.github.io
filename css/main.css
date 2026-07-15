@@ -1414,7 +1414,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ff05ff;
+    background: #ffff90;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2977,4 +2977,117 @@ header.header {
 .giscus {
   max-width: unset;
   box-sizing: border-box;
+}
+body {
+  background: linear-gradient(135deg, #f0fbfa 0%, #f6f4ff 50%, #fdf6f9 100%);
+  background-attachment: fixed;
+}
+.site-title {
+  background: linear-gradient(90deg, #37c6c0, #7c4dff, #ff6b9d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+.content-wrap,
+.sidebar-inner {
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(60,80,150,0.08);
+  transition: box-shadow 0.3s ease;
+}
+.content-wrap:hover {
+  box-shadow: 0 8px 30px rgba(60,80,150,0.14);
+}
+.post-block {
+  transition: transform 0.25s ease;
+}
+.post-block:hover {
+  transform: translateY(-2px);
+}
+.post-title-link {
+  transition: all 0.25s ease;
+}
+.post-title-link:hover {
+  background: linear-gradient(90deg, #37c6c0, #7c4dff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.post-body h2 {
+  padding-left: 12px;
+  border-left: 4px solid #37c6c0;
+  border-image: linear-gradient(180deg, #37c6c0, #7c4dff) 1;
+}
+.post-body h3 {
+  padding-left: 10px;
+  border-left: 3px solid rgba(124,77,255,0.6);
+}
+.site-author-image {
+  border: 3px solid transparent !important;
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(135deg, #37c6c0, #7c4dff, #ff6b9d) border-box;
+  box-shadow: 0 0 18px rgba(124,77,255,0.35);
+}
+.menu-item a:hover,
+.menu-item a.menu-item-active {
+  background-image: linear-gradient(90deg, rgba(55,198,192,0.12), rgba(124,77,255,0.12));
+  border-radius: 8px;
+}
+.post-tags a,
+.tag-cloud a {
+  border-radius: 999px;
+  padding: 1px 10px;
+  transition: all 0.25s ease;
+}
+.post-tags a:hover,
+.tag-cloud a:hover {
+  background: linear-gradient(90deg, #37c6c0, #7c4dff);
+  color: #fff !important;
+  border-color: transparent;
+}
+.post-body img {
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.post-body blockquote {
+  border-left: 4px solid #37c6c0;
+  background: linear-gradient(90deg, rgba(55,198,192,0.07), transparent);
+  border-radius: 0 8px 8px 0;
+}
+.post-body table thead th {
+  background: linear-gradient(90deg, rgba(55,198,192,0.12), rgba(124,77,255,0.12));
+}
+.post-body .highlight,
+.post-body pre {
+  border-radius: 10px;
+}
+::selection {
+  background: rgba(124,77,255,0.25);
+}
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #37c6c0, #7c4dff);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+.back-to-top {
+  background: linear-gradient(135deg, #37c6c0, #7c4dff);
+  border-radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #0e1a1f 0%, #141225 50%, #1d1420 100%);
+    background-attachment: fixed;
+  }
+  .content-wrap,
+  .sidebar-inner {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+  }
+  .site-author-image {
+    background: linear-gradient(#222, #222) padding-box, linear-gradient(135deg, #37c6c0, #7c4dff, #ff6b9d) border-box;
+  }
 }
